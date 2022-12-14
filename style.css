@@ -1,0 +1,161 @@
+:root {
+  --clr-primary: 225, 100%, 94%;
+  --clr-secondary: 245, 75%, 52%;
+
+  --clr-very-pale-blue: 225, 100%, 98%;
+  --clr-desaturated-blue: 222, 23%, 55%;
+  --clr-dark-blue: 223, 47%, 23%;
+  --clr-hover: 245, 83%, 68%;
+
+
+
+  --ff-base: 'Red Hat Display', sans-serif;
+
+  --fw-regular: 500;
+  --fw-bold: 700;
+  --fw-black: 900;
+}
+
+/* Reset */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Generic Styling */
+
+body {
+  font-family: var(--ff-base);
+  background-color: hsl(var(--clr-very-pale-blue));
+  background-image: url("images/pattern-background-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: grid;
+  place-content: center;
+}
+
+/* Order Summary Styles */
+
+.order-summary {
+    background-color: #fff;
+    margin: 1.5em;
+    border-radius: 20px;
+    overflow: hidden;
+    max-width: 400px;
+}
+
+/* Content Styles */
+
+.order-summary-content {
+    text-align: center;
+}
+
+.content-title {
+    font-weight: var(--fw-black);
+    color: hsl(var(--clr-dark-blue));
+    padding: 1em 0;
+}
+
+.content-text {
+    color: hsl(var(--clr-desaturated-blue));
+    margin: 0 2em;
+}
+
+/* Pricing Styles */
+
+.pricing {
+    background-color: hsl(var(--clr-very-pale-blue));
+    border-radius: 15px;
+    margin: 1.5em auto;
+    padding: 1em;
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+}
+
+.plan {
+    font-weight: var(--fw-black);
+    color: hsl(var(--clr-dark-blue));
+}
+
+.price {
+    color: hsl(var(--clr-desaturated-blue));
+}
+
+.plan-link {
+    font-size: .9rem;
+    font-weight: var(--fw-bold);
+    color: hsl(var(--clr-secondary));
+}
+
+.plan-link:hover {
+    color: hsl(var(--clr-hover));
+}
+
+/* Utilities */
+
+.flex-group {
+    display: flex;
+    gap: 1em;
+}
+
+.button {
+    background-color: hsl(var(--clr-secondary));
+    border-radius: 10px;
+    margin: 0 auto .8em auto;
+    padding: 1em;
+    width: 85%;
+    font: inherit;
+    color: #fff;
+    font-weight: var(--fw-black);
+    cursor: pointer;
+    border: none;
+    box-shadow: 0px 26px 51px -17px rgba(56,42,225,1);
+}
+
+.ghost {
+    background: none;
+    color: hsl(var(--clr-desaturated-blue));
+    box-shadow: none;
+}
+
+.button:hover {
+    background-color: hsl(var(--clr-hover));
+}
+
+.ghost:hover {
+    background: none;
+}
+
+@media (min-width: 1440px) {
+    body {
+        background-image: url("images/pattern-background-desktop.svg");
+    }
+}
