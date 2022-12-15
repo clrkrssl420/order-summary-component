@@ -117,6 +117,7 @@ body {
 
 .plan-link:hover {
     color: hsl(var(--clr-hover));
+    text-decoration: none;
 }
 
 /* Utilities */
@@ -152,6 +153,7 @@ body {
 
 .ghost:hover {
     background: none;
+    color: #000;
 }
 
 @media (min-width: 1440px) {
